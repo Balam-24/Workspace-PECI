@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Jaguar flotando */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+/* Burbuja de mensaje aparece */
+@keyframes popIn {
+  0%   { transform: scale(0); opacity: 0; }
+  80%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Título entra desde abajo */
+@keyframes slideUp {
+  0%   { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Botón pulsa */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.06); }
+}
+
+/* Estrellas/decoraciones giran lento */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Tarjetas entran una por una */
+@keyframes fadeInUp {
+  0%   { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.jaguar-float    { animation: float 3s ease-in-out infinite; }
+.pop-in          { animation: popIn 0.5s ease-out 1.5s both; }
+.slide-up        { animation: slideUp 0.8s ease-out both; }
+.pulse-btn       { animation: pulse 2s ease-in-out infinite; }
+.spin-slow       { animation: spinSlow 12s linear infinite; }
+.fade-in-up-1    { animation: fadeInUp 0.6s ease-out 0.2s both; }
+.fade-in-up-2    { animation: fadeInUp 0.6s ease-out 0.4s both; }
+.fade-in-up-3    { animation: fadeInUp 0.6s ease-out 0.6s both; }
