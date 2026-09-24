@@ -98,7 +98,7 @@ function Home() {
 
         {/* Contenido */}
         <div className="relative z-10 text-center px-6 slide-up">
-          <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-7xl font-bold text-white leading-tight">
             Aprende la Cultura Maya
             <span className="block text-[#E9C46A]">Jugando 🌿</span>
           </h2>
