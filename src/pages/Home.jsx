@@ -166,7 +166,7 @@ function Home() {
 
       {/* FOOTER */}
       <footer className="bg-[#1E3D32] text-white py-10 text-center">
-        <h4 className="text-2xl font-bold">EcoMaya Kids 🌿</h4>
+        <h4 className="text-2xl font-bold">MayaPlay 🌿</h4>
         <p className="mt-3 text-gray-300">Aprender jugando sobre cultura maya y el medio ambiente.</p>
       </footer>
     </div>
