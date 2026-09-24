@@ -89,13 +89,12 @@ function Home() {
           <img src="/jaguar.png" alt="Jaguar Maya" className="w-52 md:w-80 drop-shadow-2xl" />
         </div>
 
-       {/* Burbuja mensaje */}
-<div className="hidden md:block absolute md:bottom-48 md:right-65 bg-white px-6 py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] max-w-[280px] pop-in">
-  <p className="font-bold text-[#2C5F4D] text-lg">🐆 ¡Hola!</p>
-  <p className="text-sm text-gray-700 mt-2">¡Vamos a aprender jugando!</p>
-  <p className="text-sm font-semibold text-[#A98467] mt-2 italic">Ko'ox kanik yéetel báaxal</p>
+{/* Burbuja mensaje */}
+<div className="absolute bottom-20 left-4 md:translate-x-0 md:top-auto md:bottom-48 md:left-auto md:right-65 bg-white px-4 py-3 md:px-6 md:py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] w-[160px] md:w-auto md:max-w-[280px] pop-in">
+  <p className="font-bold text-[#2C5F4D] text-sm md:text-lg">🐆 ¡Hola!</p>
+  <p className="text-xs md:text-sm text-gray-700 mt-1 md:mt-2">¡Vamos a aprender jugando!</p>
+  <p className="text-xs md:text-sm font-semibold text-[#A98467] mt-1 md:mt-2 italic">Ko'ox kanik yéetel báaxal</p>
 </div>
-
         {/* Contenido */}
         <div className="relative z-10 text-center px-6 slide-up">
           <h2 className="text-3xl md:text-7xl font-bold text-white leading-tight">
