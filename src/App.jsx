@@ -14,19 +14,24 @@ import MemoramaCenote from "./pages/MemoramaCenote";
 import ArbolMenu from "./pages/ArbolMenu";
 import MapaSelva from "./pages/MapaSelva";
 import TriviaArbol from "./pages/TriviaArbol";
-import MenuFlotante from "./components/MenuFlotante";
 import MilpaMenu from "./pages/MilpaMenu";
 import AdivinaPlanta from "./pages/AdivinaPlanta";
 import ConstruyeMilpa from "./pages/ConstruyeMilpa";
+import AprenderPalabras from "./pages/AprenderPalabras";
+import TriviaMaya from "./pages/TriviaMaya";
 import PlantasMenu from "./pages/PlantasMenu";
 import ExploraPlantas from "./pages/ExploraPlantas";
 import IdentificaPlanta from "./pages/IdentificaPlanta";
-import AprenderPalabras from "./pages/AprenderPalabras";
-import TriviaMaya from "./pages/TriviaMaya";
+import MenuFlotante from "./components/MenuFlotante";
 
 function RutaProtegida({ children }) {
   const { usuario } = useAuth();
   return usuario ? children : <Navigate to="/login" />;
+}
+
+function MenuFlotanteProtegido() {
+  const { usuario } = useAuth();
+  return usuario ? <MenuFlotante /> : null;
 }
 
 function App() {
@@ -49,13 +54,14 @@ function App() {
         <Route path="/game/milpa" element={<RutaProtegida><MilpaMenu /></RutaProtegida>} />
         <Route path="/game/milpa/adivina" element={<RutaProtegida><AdivinaPlanta /></RutaProtegida>} />
         <Route path="/game/milpa/construye" element={<RutaProtegida><ConstruyeMilpa /></RutaProtegida>} />
+        <Route path="/lengua-maya/palabras" element={<RutaProtegida><AprenderPalabras /></RutaProtegida>} />
+        <Route path="/lengua-maya/trivia" element={<RutaProtegida><TriviaMaya /></RutaProtegida>} />
         <Route path="/saberes/plantas" element={<RutaProtegida><PlantasMenu /></RutaProtegida>} />
         <Route path="/saberes/plantas/explora" element={<RutaProtegida><ExploraPlantas /></RutaProtegida>} />
         <Route path="/saberes/plantas/identifica" element={<RutaProtegida><IdentificaPlanta /></RutaProtegida>} />
-        <Route path="/lengua-maya/palabras" element={<RutaProtegida><AprenderPalabras /></RutaProtegida>} />
-<       Route path="/lengua-maya/trivia" element={<RutaProtegida><TriviaMaya /></RutaProtegida>} />
       </Routes>
-      <MenuFlotante />
+
+      <MenuFlotanteProtegido />
     </BrowserRouter>
   );
 }
