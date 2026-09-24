@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MenuFlotante from "./components/MenuFlotante";
 
 import Home from "./pages/Home";
 import MedioAmbiente from "./pages/MedioAmbiente";
@@ -28,6 +29,9 @@ function App() {
         <Route path="/game/arbol/mapa" element={<MapaSelva />} />
         <Route path="/game/arbol/trivia" element={<TriviaArbol />} />
       </Routes>
+
+      {/* Aparece en todas las páginas */}
+      <MenuFlotante />
     </BrowserRouter>
   );
 }

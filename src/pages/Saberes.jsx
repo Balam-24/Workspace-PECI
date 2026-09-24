@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Saberes() {
   return (
     <div className="min-h-screen bg-orange-50 p-10">
 
-      <h1 className="text-5xl font-bold text-orange-800 mb-10">
+      <Link to="/" className="text-orange-800 font-bold text-lg">
+        ← Volver al inicio
+      </Link>
+
+      <h1 className="text-5xl font-bold text-orange-800 mb-10 mt-5">
         🌽 Saberes Ancestrales
       </h1>
 

@@ -55,10 +55,11 @@ function Home() {
 
       {/* NAVBAR */}
       <nav className="bg-[#1E3D32] text-white shadow-xl">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
-          <h1 className="text-3xl font-bold tracking-wide">
-            🌿 EcoMaya Kids 🐆
-          </h1>
+        <div className="flex justify-between items-center px-4 py-5">
+          <div className="flex items-center gap-3">
+  <img src="/logo.png" alt="MayaPlay" className="h-16" />
+  <h1 className="text-3xl font-bold tracking-wide text-white">MayaPlay</h1>
+</div>
           <div className="hidden md:flex gap-8 font-medium">
             <Link to="/" className="hover:text-[#D4A373] transition">Inicio</Link>
             <Link to="/medio-ambiente" className="hover:text-[#D4A373] transition">Juegos</Link>
@@ -84,12 +85,12 @@ function Home() {
         <div className="absolute bottom-40 left-60 text-[65px] opacity-10 spin-slow">🌙</div>
 
         {/* Jaguar flotando */}
-        <div className="absolute bottom-0 right-10 z-10 jaguar-float">
+        <div className="absolute bottom-0 -right-4 z-10 jaguar-float">
           <img src="/jaguar.png" alt="Jaguar Maya" className="w-52 md:w-80 drop-shadow-2xl" />
         </div>
 
         {/* Burbuja mensaje */}
-        <div className="absolute bottom-48 right-4 md:bottom-64 md:right-56 bg-white px-6 py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] max-w-[200px] md:max-w-[280px] pop-in">
+        <div className="absolute bottom-32 -right-2 md:bottom-48 md:right-65 bg-white px-6 py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] max-w-[200px] md:max-w-[280px] pop-in">
           <p className="font-bold text-[#2C5F4D] text-lg">🐆 ¡Hola!</p>
           <p className="text-sm text-gray-700 mt-2">¡Vamos a aprender jugando!</p>
           <p className="text-sm font-semibold text-[#A98467] mt-2 italic">Ko'ox kanik yéetel báaxal</p>

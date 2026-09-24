@@ -126,7 +126,7 @@ export default function MemoramaCenote() {
   return (
     <div className="min-h-screen bg-[#E3F2FD] p-6 flex flex-col items-center">
       <div className="w-full max-w-3xl flex justify-between items-center mb-6">
-        <Link to="/medio-ambiente" className="text-blue-800 font-bold">← Volver</Link>
+        <Link to="/lengua-maya" className="text-blue-800 font-bold">← Volver</Link>
         <div className="bg-white rounded-2xl px-5 py-2 shadow font-bold text-blue-800">
           🧠 {intentos} intentos
         </div>
