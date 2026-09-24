@@ -89,12 +89,12 @@ function Home() {
           <img src="/jaguar.png" alt="Jaguar Maya" className="w-52 md:w-80 drop-shadow-2xl" />
         </div>
 
-        {/* Burbuja mensaje */}
-        <div className="absolute bottom-32 -right-2 md:bottom-48 md:right-65 bg-white px-6 py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] max-w-[200px] md:max-w-[280px] pop-in">
-          <p className="font-bold text-[#2C5F4D] text-lg">🐆 ¡Hola!</p>
-          <p className="text-sm text-gray-700 mt-2">¡Vamos a aprender jugando!</p>
-          <p className="text-sm font-semibold text-[#A98467] mt-2 italic">Ko'ox kanik yéetel báaxal</p>
-        </div>
+       {/* Burbuja mensaje */}
+<div className="hidden md:block absolute md:bottom-48 md:right-65 bg-white px-6 py-4 rounded-[30px] shadow-xl z-20 border-4 border-[#E9C46A] max-w-[280px] pop-in">
+  <p className="font-bold text-[#2C5F4D] text-lg">🐆 ¡Hola!</p>
+  <p className="text-sm text-gray-700 mt-2">¡Vamos a aprender jugando!</p>
+  <p className="text-sm font-semibold text-[#A98467] mt-2 italic">Ko'ox kanik yéetel báaxal</p>
+</div>
 
         {/* Contenido */}
         <div className="relative z-10 text-center px-6 slide-up">
