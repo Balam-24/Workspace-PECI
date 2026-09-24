@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+
+import { useState, useEffect } from "react";
 
 function Home() {
+
+  const [menuAbierto, setMenuAbierto] = useState(false);
   useEffect(() => {
   const reproducir = () => {
     const audio = new Audio("/bienvenida .mp3");
@@ -53,21 +56,41 @@ function Home() {
   return (
     <div className="min-h-screen bg-[#F4F0E6] text-[#2C4A3E]">
 
-      {/* NAVBAR */}
-      <nav className="bg-[#1E3D32] text-white shadow-xl">
-        <div className="flex justify-between items-center px-4 py-5">
-          <div className="flex items-center gap-3">
-  <img src="/logo.png" alt="MayaPlay" className="h-16" />
-  <h1 className="text-3xl font-bold tracking-wide text-white">MayaPlay</h1>
-</div>
-          <div className="hidden md:flex gap-8 font-medium">
-            <Link to="/" className="hover:text-[#D4A373] transition">Inicio</Link>
-            <Link to="/medio-ambiente" className="hover:text-[#D4A373] transition">Juegos</Link>
-            <Link to="/lengua-maya" className="hover:text-[#D4A373] transition">Lengua Maya</Link>
-            <Link to="/progreso" className="hover:text-[#D4A373] transition">Progreso</Link>
-          </div>
-        </div>
-      </nav>
+{/* NAVBAR */}
+<nav className="bg-[#1E3D32] text-white shadow-xl">
+  <div className="flex justify-between items-center px-4 py-4">
+    <div className="flex items-center gap-3">
+      <img src="/logo.png" alt="MayaPlay" className="h-16" />
+      <h1 className="text-2xl font-bold tracking-wide">MayaPlay</h1>
+    </div>
+
+    {/* Desktop */}
+    <div className="hidden md:flex gap-8 font-medium">
+      <Link to="/" className="hover:text-[#D4A373] transition">Inicio</Link>
+      <Link to="/medio-ambiente" className="hover:text-[#D4A373] transition">Juegos</Link>
+      <Link to="/lengua-maya" className="hover:text-[#D4A373] transition">Lengua Maya</Link>
+      <Link to="/progreso" className="hover:text-[#D4A373] transition">Progreso</Link>
+    </div>
+
+    {/* Hamburguesa móvil */}
+    <button
+      className="md:hidden text-white text-3xl"
+      onClick={() => setMenuAbierto(!menuAbierto)}
+    >
+      {menuAbierto ? "✕" : "☰"}
+    </button>
+  </div>
+
+  {/* Menú móvil */}
+  {menuAbierto && (
+    <div className="md:hidden flex flex-col px-6 pb-4 gap-4 font-medium border-t border-green-700">
+      <Link to="/" onClick={() => setMenuAbierto(false)} className="hover:text-[#D4A373] transition py-2">Inicio</Link>
+      <Link to="/medio-ambiente" onClick={() => setMenuAbierto(false)} className="hover:text-[#D4A373] transition py-2">Juegos</Link>
+      <Link to="/lengua-maya" onClick={() => setMenuAbierto(false)} className="hover:text-[#D4A373] transition py-2">Lengua Maya</Link>
+      <Link to="/progreso" onClick={() => setMenuAbierto(false)} className="hover:text-[#D4A373] transition py-2">Progreso</Link>
+    </div>
+  )}
+</nav>
 
       {/* HERO */}
       <section className="relative h-[650px] flex items-center justify-center bg-gradient-to-br from-[#2C5F4D] to-[#1E3D32] overflow-hidden">
